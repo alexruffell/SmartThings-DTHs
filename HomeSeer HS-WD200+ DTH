@@ -570,19 +570,19 @@ def zwaveEvent(physicalgraph.zwave.commands.centralscenev1.CentralSceneNotificat
                      result += response("delay 5000")
                      result += response(zwave.switchMultilevelV1.switchMultilevelGet())
                   }
-                  log.debug ("PU0")
+                  log.debug ("Press UP 1 time")
                   break
               case 1:
                   //Commented following line as it appears to be sending off, then immediately on after a HOLD DOWN button press
                   //result=createEvent([name: "switch", value: "on", type: "physical"])
-                  log.debug ("PU1")
+                  log.debug ("Press Up ?")
                   break
               case 2:
                   // Hold
                   result += createEvent(holdUpResponse("physical"))  
                   //Commented following line as it appears to be sending off, then immediately on after a HOLD DOWN button press
                   //result += createEvent([name: "switch", value: "on", type: "physical"])
-                  log.debug ("PU2")
+                  log.debug ("Hold Up")
                   break
               case 3: 
                   // 2 Times
@@ -593,22 +593,22 @@ def zwaveEvent(physicalgraph.zwave.commands.centralscenev1.CentralSceneNotificat
                      result += response("delay 5000")
                      result += response(zwave.switchMultilevelV1.switchMultilevelGet())
                   }
-                  log.debug ("PU3")
+                  log.debug ("Press Up 2 times")
                   break
               case 4:
                   // 3 times
                   result=createEvent(tapUp3Response("physical"))
-                  log.debug ("PU4")
+                  log.debug ("Press Up 3 times")
                   break
               case 5:
                   // 4 times
                   result=createEvent(tapUp4Response("physical"))
-                  log.debug ("PU5")
+                  log.debug ("Press Up 4 times")
                   break
               case 6:
                   // 5 times
                   result=createEvent(tapUp5Response("physical"))
-                  log.debug ("PU6")
+                  log.debug ("Press Up 5 times")
                   break
               default:
                   log.debug ("unexpected up press keyAttribute: $cmd.keyAttributes")
@@ -623,19 +623,19 @@ def zwaveEvent(physicalgraph.zwave.commands.centralscenev1.CentralSceneNotificat
                   result += createEvent(tapDown1Response("physical"))
                   //Commented following line as it appears to be sending off, then immediately on after a HOLD DOWN button press
                   //result += createEvent([name: "switch", value: "off", type: "physical"])
-                  log.debug ("PD0")
+                  log.debug ("Press Down 1 time")
                   break
               case 1:
                   //Commented following line as it appears to be sending off, then immediately on after a HOLD DOWN button press
                   //result=createEvent([name: "switch", value: "off", type: "physical"])
-                  log.debug ("PD1")
+                  log.debug ("Press Down ?")
                   break
               case 2:
                   // Hold
                   result += createEvent(holdDownResponse("physical"))
                   //Commented following line as it appears to be sending off, then immediately on after a HOLD DOWN button press
                   //result += createEvent([name: "switch", value: "off", type: "physical"])
-                  log.debug ("PD2")
+                  log.debug ("Hold Down")
                   break
               case 3: 
                   // 2 Times
@@ -646,22 +646,22 @@ def zwaveEvent(physicalgraph.zwave.commands.centralscenev1.CentralSceneNotificat
                      result += response("delay 5000")
                      result += response(zwave.switchMultilevelV1.switchMultilevelGet())
                   }
-                  log.debug ("PD3")
+                  log.debug ("Press Down 2 times")
                   break
               case 4:
                   // 3 Times
                   result=createEvent(tapDown3Response("physical"))
-                  log.debug ("PD4")
+                  log.debug ("Press Down 3 times")
                   break
               case 5:
                   // 4 Times
                   result=createEvent(tapDown4Response("physical"))
-                  log.debug ("PD5")
+                  log.debug ("Press Down 4 times")
                   break
               case 6:
                   // 5 Times
                   result=createEvent(tapDown5Response("physical"))
-                  log.debug ("PD6")
+                  log.debug ("Press Down 5 times")
                   break
               default:
                   log.debug ("unexpected down press keyAttribute: $cmd.keyAttributes")
