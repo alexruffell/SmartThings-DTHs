@@ -53,7 +53,7 @@
  */
  
 metadata {
-	definition (name: "HomeSeer WD200+ Dimmer - fw 5.14+", namespace: "homeseer", author: "support@homeseer.com") {
+	definition (name: "HomeSeer WD200+ Dimmer", namespace: "homeseer", author: "support@homeseer.com") {
 		capability "Switch Level"
 		capability "Actuator"
 		capability "Indicator"
