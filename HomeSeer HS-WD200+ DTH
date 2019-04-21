@@ -20,8 +20,8 @@
  *
  *	Changelog:
  *
- *  1.0.ar.11 21-Apr-2019 Commented out some ON / OFF events from the Scene section as they were causing incorrect events when holding the button down to dim the light. (@aruffell)
- *  1.0.ar.10 20-Apr-2019 Added lowest dim level configuration option for firmware version 5.14 and above (@aruffell)
+ *	1.0.ar.11 21-Apr-2019 Commented out some ON / OFF events from the Scene section as they were causing incorrect events when holding the button down to dim the light. (@aruffell)
+ *	1.0.ar.10 20-Apr-2019 Added lowest dim level configuration option for firmware version 5.14 and above (@aruffell)
  *	1.0.dd.9  13-Feb-2019 Added dummy setLevel command with duration for compatibility with HA Bridge, others? (darwin@darwinsden.com)
  *	1.0.dd.8  28-Jul-2018 Additional protection against floating point default preference values
  *	1.0.dd.6  27-Jul-2018 Added call to set led flash rate and added protection against floating point default preference values
